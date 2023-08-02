@@ -9,6 +9,7 @@
 
 body {
 	background-image: url("background-image/mountain.jpg");
+	background-size: cover;
 	display: grid;
 	  grid-template-columns: 1fr;
 	  grid-template-rows: 100vh;
