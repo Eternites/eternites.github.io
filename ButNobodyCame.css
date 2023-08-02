@@ -8,7 +8,7 @@
 }
 
 body {
-	background-image: url("background-image/bg-2.gif");
+	background-image: url("background-image/bg-3.gif");
 	background-size: cover;
 	display: grid;
 	  grid-template-columns: 1fr;
