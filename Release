@@ -1,9 +1,9 @@
-Origin: Paisseon's Repo 
-Label: Paisseon's Repo
+Origin: Éternelle's Repo 
+Label: Éternelle's Repo
 Suite: stable
 Version: 1.0
 Codename: EMT
-Architectures: iphoneos-arm iphoneos-arm64
+Architectures: iphoneos-arm64
 Components: main
 Description: My personal repo for jailbreak tweaks
 MD5Sum:
