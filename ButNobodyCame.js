@@ -10,6 +10,46 @@ const installer = document.getElementById('installer')
 const sileo = document.getElementById('sileo')
 const zebra = document.getElementById('zebra')
 
+const audio = new Audio('music/waterfall.mp3');
+audio.muted = true;
+
+const alert_elem = document.querySelector( '.alert' );
+
+audio.play().then( () => {
+  // already allowed
+  alert_elem.remove();
+  resetAudio();
+} )
+.catch( () => {
+  // need user interaction
+  alert_elem.addEventListener( 'click', ({ target }) => {
+    if( target.matches('button') ) {
+      const allowed = target.value === "1";
+      if( allowed ) {
+        audio.play()
+          .then( resetAudio );
+      }
+      alert_elem.remove();
+    }
+  } );
+} );
+
+document.getElementById( 'btn' ).addEventListener( 'click', (e) => {
+  if( audio.muted ) {
+    console.log( 'silent notification' );
+  }
+  else {
+    audio.play();
+  }
+} );
+
+function resetAudio() {
+  audio.pause();
+  audio.currentTime = 0;
+  audio.muted = false;
+}
+
+
 // Track current character and line
 let i = 0
 let line = ''
